@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+    <!-- 1. Ventes & Finance -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/btnTopFinance"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="6dp"
+        app:cardBackgroundColor="@color/cuni_green_light"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:strokeWidth="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="📓"
+            android:textSize="20sp"
+            android:includeFontPadding="false"
+            android:contentDescription="Ventes et Finance" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 2. Notifications -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/btnTopNotifications"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="6dp"
+        app:cardBackgroundColor="@color/cuni_green_light"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:strokeWidth="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="🔔"
+                android:textSize="20sp"
+                android:includeFontPadding="false"
+                android:contentDescription="Notifications" />
+
+            <TextView
+                android:id="@+id/tvNotificationBadge"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="3dp"
+                android:background="@drawable/bg_badge_notification"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </FrameLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 3. Paramètres -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/btnTopSettings"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:cardBackgroundColor="@color/cuni_green_light"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:strokeWidth="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="⚙️"
+            android:textSize="20sp"
+            android:includeFontPadding="false"
+            android:contentDescription="Paramètres" />
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

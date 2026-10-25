@@ -1,0 +1,447 @@
+<resources>
+    <string name="app_name">CUNI PRO</string>
+    <string name="name">Bienvenue</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_home">Accueil</string>
+    <string name="nav_rabbits">Cheptel</string>
+    <string name="nav_repro">Repro</string>
+    <string name="nav_feed">Alimentation</string>
+    <string name="nav_health">Soins &amp; Santé</string>
+
+    <!-- General Actions & Headers -->
+    <string name="title_dashboard">Tableau de bord</string>
+    <string name="title_animals">Gestion du Cheptel</string>
+    <string name="title_reproduction">Reproduction &amp; Mises Bas</string>
+    <string name="title_feed">Gestion des Aliments</string>
+    <string name="title_health_finance">Santé &amp; Finances</string>
+    <string name="title_sales_finance">Vente &amp; Finance</string>
+    <string name="title_tasks">Tâches &amp; Notifications</string>
+    <string name="title_settings">Paramètres</string>
+    <string name="title_alert_settings">Alertes &amp; Notifications</string>
+    <string name="title_edit_profile">Modifier le profil</string>
+
+    <!-- Buttons -->
+    <string name="btn_add">Ajouter</string>
+    <string name="btn_save">Enregistrer</string>
+    <string name="btn_cancel">Annuler</string>
+    <string name="btn_delete">Supprimer</string>
+    <string name="btn_edit">Modifier</string>
+    <string name="btn_close">Fermer</string>
+    <string name="btn_confirm">Confirmer</string>
+    <string name="btn_login">Se connecter</string>
+    <string name="btn_register">Créer un compte</string>
+    <string name="btn_search">Rechercher</string>
+    <string name="btn_filter">Filtrer</string>
+    <string name="btn_see_all">Voir tout</string>
+
+    <!-- Dashboard Screen -->
+    <string name="dash_total_animals">Cheptel total</string>
+    <string name="dash_males">Mâles</string>
+    <string name="dash_females">Femelles</string>
+    <string name="dash_breeders">Reproducteurs</string>
+    <string name="dash_weaned">Sévrés</string>
+    <string name="dash_fattening">Engraissement</string>
+    <string name="dash_mortality">Mortalité</string>
+    <string name="dash_income">Revenus</string>
+    <string name="dash_expenses">Dépenses</string>
+    <string name="dash_balance">Solde net</string>
+    <string name="dash_feed_stock">Stock d\'aliment</string>
+    <string name="dash_active_gestations">Gestations actives</string>
+    <string name="dash_pending_tasks">Tâches en attente</string>
+    <string name="dash_quick_actions">Actions rapides</string>
+    <string name="dash_recent_activity">Activité récente</string>
+    <string name="dash_add_animal">Ajouter un lapin</string>
+    <string name="dash_add_mating">Nouvelle saillie</string>
+    <string name="dash_add_feed">Ajouter stock</string>
+    <string name="dash_add_health">Soins &amp; Traitement</string>
+    <string name="dash_add_sale">Nouvelle vente</string>
+    <string name="dash_add_task">Nouvelle tâche</string>
+
+    <string name="dash_herd_overview">Aperçu du Cheptel &amp; Mortalité</string>
+    <string name="dash_total_living">Total Vivants</string>
+    <string name="dash_mortality_herd">Mortalité du Cheptel</string>
+    <string name="dash_income_finance">Revenus &amp; Finances</string>
+    <string name="dash_total_income">Recettes Total</string>
+    <string name="dash_total_expenses">Dépenses Total</string>
+    <string name="dash_feed_and_stock">Alimentation &amp; Stocks</string>
+    <string name="dash_total_feed_available">Stock total disponible</string>
+    <string name="dash_low_stock_threshold">Seuil stock bas atteint</string>
+    <string name="dash_repro_stats">Statistiques de Reproduction</string>
+    <string name="dash_active_gestations_lbl">Gestations en cours</string>
+    <string name="dash_kits_born_alive">Lapereaux nés vivants</string>
+    <string name="dash_kits_born_dead">Lapereaux mort-nés</string>
+    <string name="dash_kits_weaned">Lapereaux sevrés</string>
+    <string name="dash_shortcuts">Raccourcis Rapides</string>
+    <string name="dash_today_tasks">Tâches &amp; Priorités du Jour</string>
+    <string name="dash_no_pending_tasks">Aucune tâche prioritaire en attente.</string>
+
+    <!-- Animals Screen -->
+    <string name="animal_tag">Matricule</string>
+    <string name="animal_sex">Sexe</string>
+    <string name="animal_weight">Poids (kg)</string>
+    <string name="animal_breed">Race</string>
+    <string name="animal_category">Catégorie</string>
+    <string name="animal_status">Statut</string>
+    <string name="animal_birth_date">Date de naissance</string>
+    <string name="animal_cage">N° de cage</string>
+    <string name="animal_notes">Notes / Observations</string>
+    <string name="animal_male">Mâle</string>
+    <string name="animal_female">Femelle</string>
+    <string name="animal_search_hint">Rechercher par matricule, race...</string>
+    <string name="animal_all_categories">Toutes les catégories</string>
+    <string name="animal_empty">Aucun lapin enregistré</string>
+    <string name="animal_add_title">Ajouter un lapin</string>
+    <string name="animal_edit_title">Modifier le lapin</string>
+    <string name="animal_detail_title">Détails du lapin</string>
+
+    <!-- Reproduction Screen -->
+    <string name="repro_new_mating">Nouvelle saillie</string>
+    <string name="repro_female">Lapine (Femelle)</string>
+    <string name="repro_male">Lapin (Mâle)</string>
+    <string name="repro_mating_date">Date de saillie</string>
+    <string name="repro_palpation_date">Date de palpation</string>
+    <string name="repro_expected_kindling">Mise bas prévisionnelle</string>
+    <string name="repro_expected_weaning">Sevrage prévisionnel</string>
+    <string name="repro_palpation_result">Résultat palpation</string>
+    <string name="repro_positive">Positif (Gestante)</string>
+    <string name="repro_negative">Négatif (Non gestante)</string>
+    <string name="repro_record_kindling">Enregistrer la mise bas</string>
+    <string name="repro_born_alive">Nés vivants</string>
+    <string name="repro_stillborn">Mort-nés</string>
+    <string name="repro_weaned_count">Lapereaux sévrés</string>
+    <string name="repro_record_weaning">Enregistrer le sevrage</string>
+    <string name="repro_status_gestating">Gestante</string>
+    <string name="repro_status_kindled">Mise bas effectuée</string>
+    <string name="repro_status_weaned">Sevré</string>
+
+    <!-- Feed Screen -->
+    <string name="feed_stock_title">Stock d\'aliments</string>
+    <string name="feed_add_stock">Ajouter du stock</string>
+    <string name="feed_name">Nom de l\'aliment</string>
+    <string name="feed_quantity">Quantité (kg)</string>
+    <string name="feed_threshold">Seuil d\'alerte (kg)</string>
+    <string name="feed_record_consumption">Enregistrer consommation</string>
+    <string name="feed_low_stock_warning">Attention : Stock faible !</string>
+
+    <!-- Health & Finance Screen -->
+    <string name="hf_health">Soins &amp; Santé</string>
+    <string name="hf_sales">Ventes</string>
+    <string name="hf_expenses">Dépenses</string>
+    <string name="hf_mortality">Mortalité</string>
+    <string name="hf_add_health_log">Ajouter un soin</string>
+    <string name="hf_add_sale">Enregistrer une vente</string>
+    <string name="hf_add_expense">Enregistrer une dépense</string>
+    <string name="hf_add_mortality">Déclarer un décès</string>
+    <string name="hf_treatment_type">Type de soin / Traitement</string>
+    <string name="hf_product_used">Produit / Médicament</string>
+    <string name="hf_dosage">Posologie / Dose</string>
+    <string name="hf_price">Prix / Montant (FCFA)</string>
+    <string name="hf_buyer">Acheteur</string>
+
+    <!-- Tasks & Notifications -->
+    <string name="tasks_pending">Tâches en attente</string>
+    <string name="tasks_completed">Tâches terminées</string>
+    <string name="tasks_add_task">Nouvelle tâche</string>
+    <string name="tasks_title_hint">Titre de la tâche</string>
+    <string name="tasks_due_date">Date d\'échéance</string>
+    <string name="tasks_priority">Priorité</string>
+    <string name="tasks_priority_high">Haute</string>
+    <string name="tasks_priority_medium">Moyenne</string>
+    <string name="tasks_priority_low">Basse</string>
+    <string name="tasks_notifications">Notifications</string>
+    <string name="tasks_mark_all_read">Tout marquer comme lu</string>
+
+    <!-- Settings Screen -->
+    <string name="setting_profile">Profil de l\'éleveur</string>
+    <string name="setting_notifications">Notifications et alertes</string>
+    <string name="setting_breeding">Durées d\'élevage</string>
+    <string name="setting_language">Langue de l\'application</string>
+    <string name="setting_security">Sécurité &amp; Mot de passe</string>
+    <string name="setting_sync">Synchronisation Cloud</string>
+    <string name="setting_logout">Se déconnecter</string>
+    <string name="setting_sync_now">Synchroniser maintenant</string>
+    <string name="lang_french">Français</string>
+    <string name="lang_english">English</string>
+
+    <!-- Auth -->
+    <string name="auth_login_title">Connexion à CUNI PRO</string>
+    <string name="auth_register_title">Créer un compte CUNI PRO</string>
+    <string name="auth_email">Adresse email</string>
+    <string name="auth_password">Mot de passe</string>
+    <string name="auth_full_name">Nom complet</string>
+    <string name="auth_farm_name">Nom de l\'élevage / ferme</string>
+    <string name="auth_phone">Numéro de téléphone</string>
+    <string name="auth_no_account">Pas encore de compte ? S\'inscrire</string>
+    <string name="auth_have_account">Déjà un compte ? Se connecter</string>
+
+    <!-- Form Titles, Hints, Labels & Badges -->
+    <string name="form_tag_proposed">Proposé</string>
+    <string name="form_tag_hint">ex: L-025</string>
+    <string name="form_select_or_type">Sélectionner ou saisir...</string>
+    <string name="form_date_format_hint">jj/mm/aaaa</string>
+    <string name="form_weight_hint">ex: 3.8</string>
+    <string name="form_origin_hint">ex: Né dans l\'élevage</string>
+    <string name="form_notes_hint">Comportement, santé, remarques...</string>
+    <string name="form_save_btn">✓ Enregistrer</string>
+    <string name="form_save_simple">Enregistrer</string>
+
+    <!-- Animal Categories -->
+    <string name="cat_breeder">Reproducteur</string>
+    <string name="cat_primiparous">Primipare</string>
+    <string name="cat_multiparous">Multipare</string>
+    <string name="cat_fattening">Engraissement</string>
+    <string name="cat_weaned">Sevré</string>
+    <string name="cat_sold">Vendu</string>
+    <string name="cat_deceased">Décédé</string>
+    <string name="cat_all">Tous</string>
+
+    <!-- Breeds & Origins -->
+    <string name="breed_nz_white">Néo-Zélandais blanc</string>
+    <string name="breed_fauve_bourgogne">Fauve de Bourgogne</string>
+    <string name="breed_giant_flanders">Géant des Flandres</string>
+    <string name="breed_chinchilla">Chinchilla</string>
+    <string name="breed_french_papillon">Papillon Français</string>
+    <string name="breed_californian">Californien</string>
+    <string name="breed_local">Local</string>
+
+    <string name="origin_born_on_farm">Élevage (Né sur place)</string>
+    <string name="origin_purchase">Achat</string>
+    <string name="origin_donation">Donation</string>
+    <string name="origin_exchange">Échange</string>
+
+    <!-- Feed Stocks & Consumption -->
+    <string name="feed_type_label">Type d\'aliment</string>
+    <string name="feed_type_granules">Granulés</string>
+    <string name="feed_type_foin">Foin</string>
+    <string name="feed_type_legumes">Légumes</string>
+    <string name="feed_type_graines">Graines</string>
+    <string name="feed_type_autres">Autres</string>
+    <string name="feed_qty_added">Quantité ajoutée</string>
+    <string name="feed_step_1kg">Par pas de 1 kg</string>
+    <string name="feed_add_date">Date de l\'ajout</string>
+    <string name="feed_alert_title">Alerte de stock faible</string>
+    <string name="feed_alert_sub">Prévenir sous ce seuil</string>
+    <string name="feed_stock_after_add">Stock après ajout</string>
+    <string name="feed_btn_save_add">✓ Enregistrer l\'ajout</string>
+
+    <string name="feed_out_title">Sortie de stock</string>
+    <string name="feed_qty_out_label">Quantité distribuée / sortie</string>
+    <string name="feed_deducted_main">Déduit du stock principal</string>
+    <string name="feed_out_date">Date de la sortie</string>
+    <string name="feed_stock_after_out">Stock après sortie</string>
+    <string name="feed_btn_save_out">✓ Enregistrer la sortie</string>
+    <string name="feed_tab_stock">Stock</string>
+    <string name="feed_tab_consumption">Consommation</string>
+    <string name="feed_avg_per_day">par jour en moyenne</string>
+    <string name="feed_daily_detail">Consommation par jour (Détail)</string>
+    <string name="feed_by_type">Par type d\'aliment</string>
+    <string name="feed_today">Aujourd\'hui</string>
+    <string name="feed_status_sufficient">Suffisant</string>
+    <string name="feed_status_low">Stock faible</string>
+    <string name="feed_threshold_info">Seuil d\'alerte : %.0f kg</string>
+
+    <!-- Health & Care -->
+    <string name="care_title">Enregistrer un soin</string>
+    <string name="care_target_label">Lapin ou groupe concerné</string>
+    <string name="care_entire_farm">Tout l\'élevage</string>
+    <string name="care_disease_label">Maladie ou motif du soin</string>
+    <string name="care_symptoms">Symptômes</string>
+    <string name="care_treatment">Traitement</string>
+    <string name="care_dosage">Dosage</string>
+    <string name="care_date">Date du soin</string>
+    <string name="care_reminder_title">Rappel du prochain soin</string>
+    <string name="care_reminder_sub">Notification le jour prévu</string>
+    <string name="care_next_due">Le</string>
+    <string name="care_btn_save">✓ Enregistrer le soin</string>
+
+    <string name="mortality_title">Déclarer un décès</string>
+    <string name="mortality_target_label">Lapin concerné</string>
+    <string name="mortality_select_rabbit_hint">Sélectionner le lapin...</string>
+    <string name="mortality_cause_label">Cause présumée</string>
+    <string name="mortality_date_label">Date du décès</string>
+    <string name="mortality_symptoms_hint">Symptômes constatés, circonstances...</string>
+    <string name="mortality_count_label">Nombre de décès</string>
+    <string name="mortality_btn_save">✅ Déclarer le décès</string>
+    <string name="mortality_status_ongoing">En cours</string>
+    <string name="mortality_status_done">Terminé</string>
+    <string name="mortality_no_living">Aucun lapin vivant</string>
+
+    <!-- Diseases & Causes -->
+    <string name="disease_coccidiosis">Coccidiose</string>
+    <string name="disease_ear_mange">Gale des oreilles</string>
+    <string name="disease_myxomatosis">Vaccin myxomatose</string>
+    <string name="disease_diarrhea">Diarrhée</string>
+    <string name="disease_coryza">Coryza</string>
+    <string name="disease_other">Autre</string>
+
+    <string name="cause_disease">Maladie</string>
+    <string name="cause_stillborn">Mort-né</string>
+    <string name="cause_heat">Chaleur</string>
+    <string name="cause_accident">Accident</string>
+    <string name="cause_unknown">Inconnue</string>
+
+    <!-- Sales & Expenses -->
+    <string name="expense_title">Nouvelle dépense</string>
+    <string name="expense_cat_feed">Alimentation</string>
+    <string name="expense_cat_health">Santé</string>
+    <string name="expense_cat_other">Autres charges</string>
+    <string name="expense_label">Libellé</string>
+    <string name="expense_amount">Montant</string>
+    <string name="expense_date">Date de la dépense</string>
+    <string name="expense_supplier">Fournisseur ou remarque</string>
+    <string name="expense_optional">Facultatif</string>
+    <string name="expense_btn_save">✓ Enregistrer la dépense</string>
+    <string name="expense_feed_hint">ex: Granulés (50 kg)</string>
+    <string name="expense_feed_info">Vous achetez de l’aliment ? Pensez à l’ajouter aussi au stock, dans Alimentation.</string>
+    <string name="expense_health_hint">ex: Vaccins / Médicaments</string>
+    <string name="expense_health_info">Cette dépense sera comptabilisée dans la catégorie Santé de votre élevage.</string>
+    <string name="expense_other_hint">ex: Achat de cages, transport...</string>
+    <string name="expense_other_info">Cette dépense sera enregistrée dans vos Autres charges.</string>
+
+    <string name="sale_title">Nouvelle vente</string>
+    <string name="sale_type_label">Type de vente</string>
+    <string name="sale_type_rabbits">Lapins</string>
+    <string name="sale_type_feed">Aliments</string>
+    <string name="sale_type_equipment">Matériel</string>
+    <string name="sale_select_rabbit">Sélectionner un lapin</string>
+    <string name="sale_item_designation">Désignation de l\'article</string>
+    <string name="sale_client">Client</string>
+    <string name="sale_client_hint">Nom du client (facultatif)</string>
+    <string name="sale_qty">Quantité</string>
+    <string name="sale_total_amount">Montant total</string>
+    <string name="sale_date">Date de la vente</string>
+    <string name="sale_btn_save">✓ Enregistrer la vente</string>
+    <string name="sale_rabbit_info">Le lapin choisi passera au statut « Vendu » dans la liste des animaux.</string>
+    <string name="sale_feed_info">Pensez à enregistrer aussi la sortie du stock dans Alimentation.</string>
+    <string name="sale_equipment_info">La vente de matériel sera comptabilisée dans vos recettes.</string>
+    <string name="sale_rabbits_qty_subtitle">Nombre de lapins</string>
+    <string name="sale_feed_qty_subtitle">Quantité d\'aliment (kg/sac)</string>
+    <string name="sale_equipment_qty_subtitle">Nombre d\'équipements</string>
+
+    <!-- Mating & Kindling -->
+    <string name="mating_title">Nouvelle saillie</string>
+    <string name="mating_female_hint">Sélectionner la femelle...</string>
+    <string name="mating_male_hint">Sélectionner le mâle...</string>
+    <string name="mating_date_label">Date de la saillie</string>
+    <string name="mating_auto_dates">📅 Dates calculées automatiquement</string>
+    <string name="mating_auto_reminder">Un rappel sera ajouté à vos tâches pour chacune de ces dates.</string>
+
+    <string name="kindling_title">Enregistrer une mise bas</string>
+    <string name="kindling_date_label">Date de la mise bas</string>
+    <string name="kindling_live_kits">Lapereaux vivants</string>
+    <string name="kindling_live_sub">Nés vivants dans la portée</string>
+    <string name="kindling_dead_kits">Mort-nés</string>
+    <string name="kindling_dead_sub">Comptés dans la mortalité</string>
+    <string name="kindling_total_litter">Total de la portée</string>
+    <string name="kindling_auto_weaning_info">Calculé automatiquement : 35 jours après la mise bas. Un rappel sera ajouté à vos tâches.</string>
+    <string name="kindling_btn_save">✓ Enregistrer la mise bas</string>
+
+    <!-- Edit Profile & Alert Settings -->
+    <string name="profile_avatar_label">Votre pastille</string>
+    <string name="profile_avatar_sub">Elle reprend les initiales de votre nom.</string>
+    <string name="profile_email_info">C\'est votre identifiant de connexion : il ne peut pas être modifié ici.</string>
+    <string name="profile_btn_save">Enregistrer les modifications</string>
+    <string name="profile_btn_change_pass">Changer le mot de passe</string>
+
+    <string name="alerts_header">Réglages des alertes</string>
+    <string name="alerts_auto_title">Alertes automatiques</string>
+    <string name="alerts_low_stock_sub">Quand un aliment passe sous son seuil</string>
+    <string name="alerts_care_sub">Le jour du soin prévu</string>
+    <string name="alerts_tasks_sub">Au jour et à l\'heure choisis</string>
+    <string name="alerts_morning_time">Heure des rappels du matin</string>
+    <string name="alerts_battery_title">Pour ne manquer aucun rappel</string>
+    <string name="alerts_battery_sub">Autorisez les notifications et désactivez l\'économiseur de batterie pour CUNI PRO.</string>
+    <string name="alerts_battery_btn">Voir comment faire</string>
+
+    <!-- Settings Dialog & Main -->
+    <string name="settings_edit_profile">Modifier le profil</string>
+    <string name="settings_section_language">Langue</string>
+    <string name="settings_section_offline">Fonctionnement hors connexion</string>
+    <string name="settings_about_title">À propos de CUNI PRO</string>
+    <string name="settings_about_body">Version 1.0.0 (Production)\nApplication professionnelle de gestion d\'élevage cunicole.</string>
+    <string name="settings_sync_offline_title">Fonctionnement hors connexion</string>
+    <string name="settings_sync_synced">Tout est synchronisé</string>
+    <string name="settings_last_sync_format">Dernière synchronisation : %s</string>
+    <string name="settings_data_to_send">Données à envoyer</string>
+    <string name="settings_sync_wifi_title">Synchroniser seulement en Wi-Fi</string>
+    <string name="settings_sync_wifi_sub">Économise vos données mobiles</string>
+    <string name="settings_cloud_backup_title">Sauvegarde cloud automatique</string>
+    <string name="settings_cloud_backup_sub">Vos données sont aussi copiées en ligne</string>
+    <string name="settings_offline_info">L\'application fonctionne sans internet. Vos données sont gardées sur le téléphone et envoyées dès que le réseau revient.</string>
+    <string name="settings_section_preferences">Préférences</string>
+    <string name="settings_alerts_title">Alertes et rappels</string>
+    <string name="settings_alerts_sub">Stock, mise bas, sevrage, soins</string>
+    <string name="settings_breeding_durations_format">Palpation %1$d j · Mise bas %2$d j · Sevrage %3$d j</string>
+    <string name="settings_section_security">Sécurité</string>
+    <string name="settings_section_help">Aide</string>
+    <string name="settings_help_support">Aide et assistance</string>
+    <string name="settings_terms">Conditions d\'utilisation</string>
+    <string name="terms_dialog_title">Conditions d\'utilisation</string>
+    <string name="terms_btn_close">J\'ai compris</string>
+    <string name="terms_content"><b>CONDITIONS GÉNÉRALES D\'UTILISATION DE CUNI PRO</b><br/><br/><b>1. Acceptation des conditions</b><br/>En créant un compte ou en utilisant l\'application CUNI PRO, vous acceptez d\'être lié par les présentes conditions d\'utilisation. Si vous n\'acceptez pas ces conditions, veuillez ne pas utiliser l\'application.<br/><br/><b>2. Description du service</b><br/>CUNI PRO est une application de gestion d\'élevage cunicole (lapins). Elle vous permet de suivre votre cheptel, la reproduction, l\'alimentation, la santé, les finances et la planification des tâches. L\'application fonctionne en mode hors-ligne et synchronise automatiquement vos données avec le cloud lorsque le réseau est disponible.<br/><br/><b>3. Compte et sécurité</b><br/>Vous êtes responsable du maintien de la confidentialité de vos identifiants de connexion et de toutes les activités effectuées sous votre compte. Vous vous engagez à fournir des informations exactes lors de votre inscription.<br/><br/><b>4. Propriété des données</b><br/>Toutes les données saisies concernant votre élevage (animaux, pesées, saillies, dépenses, ventes) restent votre propriété exclusive. CUNI PRO traite ces données uniquement pour assurer le fonctionnement et la sauvegarde de votre compte.<br/><br/><b>5. Responsabilité et disponibilité</b><br/>CUNI PRO s\'efforce de garantir la disponibilité et la sécurité du service. Toutefois, l\'application est fournie "en l\'état". L\'éleveur demeure seul responsable des décisions de gestion appliquées à son élevage.<br/><br/><b>6. Modifications des conditions</b><br/>Nous nous réservons le droit de modifier les présentes conditions à tout moment. Les utilisateurs seront informés des mises à jour importantes via l\'application.<br/><br/><b>7. Contact</b><br/>Pour toute question concernant les conditions d\'utilisation, contactez le support CUNI PRO à : <b>support@cunipro.app</b>.</string>
+    <string name="settings_about">À propos</string>
+    <string name="settings_version">Version 1.0.0</string>
+    <string name="settings_logout_confirm_msg">Êtes-vous sûr de vouloir vous déconnecter ?</string>
+    <string name="settings_sync_success">Synchronisation réussie !</string>
+    <string name="settings_lang_set_fr">Langue définie : Français</string>
+    <string name="settings_lang_set_en">Language set to English</string>
+    <string name="settings_durations_updated">Durées mises à jour</string>
+    <string name="settings_password_min_length">Le nouveau mot de passe doit contenir au moins 6 caractères</string>
+    <string name="settings_password_mismatch">Les mots de passe ne correspondent pas</string>
+    <string name="settings_password_updated">Mot de passe modifié avec succès</string>
+    <string name="settings_password_incorrect">Le mot de passe actuel est incorrect</string>
+    <string name="settings_password_current_empty">Veuillez entrer votre mot de passe actuel</string>
+    <string name="btn_yes">Oui</string>
+
+    <!-- Dialogs & General UI -->
+    <string name="dialog_change_pass_title">Changer le mot de passe</string>
+    <string name="dialog_current_pass">Mot de passe actuel</string>
+    <string name="dialog_new_pass">Nouveau mot de passe</string>
+    <string name="dialog_confirm_pass">Confirmer le nouveau mot de passe</string>
+    <string name="dialog_durations_title">Durées de reproduction (jours)</string>
+    <string name="dialog_durations_palpation">Palpation (jours après saillie)</string>
+    <string name="dialog_durations_kindling">Mise bas / Gestation (jours)</string>
+    <string name="dialog_durations_weaning">Sevrage (jours après mise bas)</string>
+
+    <string name="tasks_received_tab">Reçues</string>
+    <string name="tasks_tasks_tab">Tâches</string>
+    <string name="tasks_info_banner">Chaque tâche vous envoie un rappel sur le téléphone, même sans internet.</string>
+    <string name="tasks_important_flag">Tâche importante / urgente 🚩</string>
+    <string name="tasks_category">Catégorie</string>
+    <string name="tasks_reminder">Rappel</string>
+    <string name="tasks_repetition">Répétition</string>
+
+    <string name="animal_detail_header">Fiche du lapin</string>
+    <string name="animal_detail_btn_edit">✏️ Modifier</string>
+    <string name="animal_detail_btn_delete">🗑️ Supprimer</string>
+    <string name="animal_delete_confirm_title">Supprimer le lapin</string>
+    <string name="animal_delete_confirm_msg">Voulez-vous vraiment supprimer ce lapin ?</string>
+
+    <string name="repro_mark_weaned">Marquer comme sevré</string>
+    <string name="repro_kits_born">Lapereaux nés</string>
+    <string name="repro_success_rate">Taux de réussite</string>
+    <string name="repro_gestations_tab">Gestations</string>
+    <string name="repro_kindling_tab">Mises bas</string>
+    <string name="repro_weaning_tab">Sevrages</string>
+
+    <string name="sales_total_income">Recettes Total</string>
+    <string name="sales_total_expenses">Dépenses Total</string>
+    <string name="sales_net_balance">Solde Net :</string>
+    <string name="sales_net_balance_sub">Le solde net est le bénéfice simple : recettes moins dépenses.</string>
+    <string name="sales_sales_tab">Ventes</string>
+    <string name="sales_expenses_tab">Dépenses</string>
+    <string name="sales_no_sales">Aucune vente enregistrée pour le moment.</string>
+    <string name="sales_no_expenses">Aucune dépense enregistrée pour le moment.</string>
+    <string name="sales_expense_breakdown">Répartition des dépenses</string>
+
+    <string name="health_next_care">Prochain soin prévu</string>
+    <string name="health_no_reminders">Aucun rappel programmé</string>
+    <string name="health_no_logs">Aucun soin ou traitement enregistré.</string>
+    <string name="health_mortality_month">Décès en ce mois</string>
+    <string name="health_mortality_rate">Taux de mortalité</string>
+    <string name="health_main_cause">Cause principale</string>
+    <string name="health_causes_3m">Causes sur 3 mois</string>
+    <string name="health_last_deaths">Derniers décès</string>
+    <string name="health_no_deaths">Aucune déclaration de décès enregistrée.</string>
+</resources>

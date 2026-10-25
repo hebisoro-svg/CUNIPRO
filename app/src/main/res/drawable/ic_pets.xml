@@ -1,0 +1,41 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28dp"
+    android:height="28dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+  <!-- Left Ear -->
+  <path
+      android:fillColor="#E8F5E9"
+      android:pathData="M7,2C5.5,2 4.5,4 5,8L7,12L9,12L8,6C8,3.8 7.8,2 7,2z"/>
+  <path
+      android:fillColor="#FF8A80"
+      android:pathData="M6.5,3.5C5.8,3.5 5.5,4.8 5.8,7.2L7,10.5L7.8,10.5L7.2,6C7.2,4.5 7,3.5 6.5,3.5z"/>
+  <!-- Right Ear -->
+  <path
+      android:fillColor="#E8F5E9"
+      android:pathData="M17,2C18.5,2 19.5,4 19,8L17,12L15,12L16,6C16,3.8 16.2,2 17,2z"/>
+  <path
+      android:fillColor="#FF8A80"
+      android:pathData="M17.5,3.5C18.2,3.5 18.5,4.8 18.2,7.2L17,10.5L16.2,10.5L16.8,6C16.8,4.5 17,3.5 17.5,3.5z"/>
+  <!-- Head -->
+  <path
+      android:fillColor="#2E7D32"
+      android:pathData="M12,9C7.5,9 4,12.5 4,17C4,20 7.5,22 12,22C16.5,22 20,20 20,17C20,12.5 16.5,9 12,9z"/>
+  <!-- Eyes -->
+  <path
+      android:fillColor="#FFFFFF"
+      android:pathData="M8.5,14A1.5,1.5 0,1 0,8.5,17A1.5,1.5 0,1 0,8.5,14z"/>
+  <path
+      android:fillColor="#1B5E20"
+      android:pathData="M8.8,15A0.7,0.7 0,1 0,8.8,16.4A0.7,0.7 0,1 0,8.8,15z"/>
+  <path
+      android:fillColor="#FFFFFF"
+      android:pathData="M15.5,14A1.5,1.5 0,1 0,15.5,17A1.5,1.5 0,1 0,15.5,14z"/>
+  <path
+      android:fillColor="#1B5E20"
+      android:pathData="M15.2,15A0.7,0.7 0,1 0,15.2,16.4A0.7,0.7 0,1 0,15.2,15z"/>
+  <!-- Nose / Muzzle -->
+  <path
+      android:fillColor="#FF8A80"
+      android:pathData="M12,17L10.8,18.2C11.5,18.7 12.5,18.7 13.2,18.2L12,17z"/>
+</vector>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cuni_background">
+
+    <!-- Top Header: Title + Subtitle + Rabbit Avatar Icon -->
+    <LinearLayout
+        android:id="@+id/headerAnimals"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitleAnimals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nav_rabbits"
+                android:textColor="@color/cuni_green_primary_dark"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTotalAnimalsSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                tools:text="24 lapins dans l'élevage" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/includeTopActions"
+            layout="@layout/include_top_actions" />
+    </LinearLayout>
+
+    <!-- Search Input Bar -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilSearchAnimal"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="4dp"
+        app:boxCornerRadiusBottomEnd="16dp"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxStrokeColor="@color/cuni_green_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerAnimals"
+        app:startIconDrawable="@drawable/ic_search">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearchAnimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/animal_search_hint"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textSize="15sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Horizontal Category Chips Header -->
+    <HorizontalScrollView
+        android:id="@+id/hsvCategories"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="20dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tilSearchAnimal">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAll"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Tous · 0"
+                app:chipCornerRadius="16dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipReproducteur"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reproducteur · 0"
+                app:chipCornerRadius="16dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipEngraissement"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Engraissement · 0"
+                app:chipCornerRadius="16dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipSevre"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sevré · 0"
+                app:chipCornerRadius="16dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipVendu"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vendu · 0"
+                app:chipCornerRadius="16dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipDecede"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Décédé · 0"
+                app:chipCornerRadius="16dp" />
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <!-- RecyclerView for Animals -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAnimals"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="false"
+        android:paddingBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hsvCategories"
+        tools:listitem="@layout/item_animal" />
+
+    <!-- Extended Floating Action Button: + Ajouter -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fabAddAnimal"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_margin="20dp"
+        android:paddingHorizontal="20dp"
+        android:text="@string/btn_add"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/cuni_green_primary_dark"
+        app:cornerRadius="16dp"
+        app:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginBottom="10dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0.5dp"
+    app:strokeColor="#E5E7EB"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="14dp">
+
+        <!-- Left Circle Icon Avatar -->
+        <FrameLayout
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_pill_green_light">
+
+            <TextView
+                android:id="@+id/tvSaleTypeIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                tools:text="🐰" />
+        </FrameLayout>
+
+        <!-- Middle Info Section -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSaleTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cuni_text_primary"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:text="Vente de lapins" />
+
+            <TextView
+                android:id="@+id/tvSaleClientAndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="#6B7280"
+                android:textSize="12sp"
+                tools:text="Awa Traoré · 18 oct." />
+
+            <TextView
+                android:id="@+id/tvSaleDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="#9CA3AF"
+                android:textSize="12sp"
+                tools:text="1 lapin (L-003)" />
+
+        </LinearLayout>
+
+        <!-- Right Amount -->
+        <TextView
+            android:id="@+id/tvSaleAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#166534"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:text="+18 000 FCFA" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

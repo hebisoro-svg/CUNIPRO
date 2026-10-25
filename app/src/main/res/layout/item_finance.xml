@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvFinanceDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Vente 2 lapins engraissement"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/cuni_text_primary" />
+
+            <TextView
+                android:id="@+id/tvFinanceCategoryAndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="VENTE_LAPIN | 10/10/2026"
+                android:textSize="12sp"
+                android:textColor="@color/cuni_text_secondary"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvFinanceAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="+ 15 000 FCFA"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/cuni_status_success" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

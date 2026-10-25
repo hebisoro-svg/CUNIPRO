@@ -1,0 +1,17 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28dp"
+    android:height="28dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+  <!-- Shield Background -->
+  <path
+      android:fillColor="#0288D1"
+      android:pathData="M12,2L4,5v6c0,5.55 3.84,10.74 8,12 4.16,-1.26 8,-6.45 8,-12V5L12,2z"/>
+  <path
+      android:fillColor="#00BCD4"
+      android:pathData="M12,3.8L5.5,6.2v4.8c0,4.6 3.1,8.9 6.5,10c3.4,-1.1 6.5,-5.4 6.5,-10V6.2L12,3.8z"/>
+  <!-- White Cross -->
+  <path
+      android:fillColor="#FFFFFF"
+      android:pathData="M10.5,7h3v3.5h3.5v3h-3.5v3.5h-3v-3.5h-3.5v-3h3.5z"/>
+</vector>

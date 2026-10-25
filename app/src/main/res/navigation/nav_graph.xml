@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/registerFragment">
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.cunipro.ui.auth.RegisterFragment"
+        android:label="Inscription"
+        tools:layout="@layout/fragment_register" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.cunipro.ui.auth.LoginFragment"
+        android:label="Connexion"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.cunipro.ui.dashboard.DashboardFragment"
+        android:label="Tableau de Bord"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/animalsFragment"
+        android:name="com.example.cunipro.ui.animals.AnimalsFragment"
+        android:label="Gestion du Cheptel"
+        tools:layout="@layout/fragment_animals">
+        <action
+            android:id="@+id/action_animalsFragment_to_animalDetailFragment"
+            app:destination="@id/animalDetailFragment" />
+        <action
+            android:id="@+id/action_animalsFragment_to_addEditAnimalFragment"
+            app:destination="@id/addEditAnimalFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/animalDetailFragment"
+        android:name="com.example.cunipro.ui.animals.AnimalDetailFragment"
+        android:label="Fiche du lapin"
+        tools:layout="@layout/fragment_animal_detail">
+        <argument
+            android:name="animalId"
+            app:argType="long"
+            android:defaultValue="-1L" />
+        <action
+            android:id="@+id/action_animalDetailFragment_to_addEditAnimalFragment"
+            app:destination="@id/addEditAnimalFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addEditAnimalFragment"
+        android:name="com.example.cunipro.ui.animals.AddEditAnimalFragment"
+        android:label="Ajouter un lapin"
+        tools:layout="@layout/fragment_add_edit_animal">
+        <argument
+            android:name="animalId"
+            app:argType="long"
+            android:defaultValue="-1L" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/reproductionFragment"
+        android:name="com.example.cunipro.ui.reproduction.ReproductionFragment"
+        android:label="Reproduction"
+        tools:layout="@layout/fragment_reproduction">
+        <action
+            android:id="@+id/action_reproductionFragment_to_addMatingFragment"
+            app:destination="@id/addMatingFragment" />
+        <action
+            android:id="@+id/action_reproductionFragment_to_recordKindlingFragment"
+            app:destination="@id/recordKindlingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addMatingFragment"
+        android:name="com.example.cunipro.ui.reproduction.AddMatingFragment"
+        android:label="Nouvelle saillie"
+        tools:layout="@layout/fragment_add_mating" />
+
+    <fragment
+        android:id="@+id/recordKindlingFragment"
+        android:name="com.example.cunipro.ui.reproduction.RecordKindlingFragment"
+        android:label="Enregistrer une mise bas"
+        tools:layout="@layout/fragment_record_kindling">
+        <argument
+            android:name="reproductionId"
+            app:argType="long"
+            android:defaultValue="-1L" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="com.example.cunipro.ui.feed.FeedFragment"
+        android:label="Alimentation"
+        tools:layout="@layout/fragment_feed">
+        <action
+            android:id="@+id/action_feedFragment_to_addFeedStockFragment"
+            app:destination="@id/addFeedStockFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_recordFeedConsumptionFragment"
+            app:destination="@id/recordFeedConsumptionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addFeedStockFragment"
+        android:name="com.example.cunipro.ui.feed.AddFeedStockFragment"
+        android:label="Ajouter du stock"
+        tools:layout="@layout/fragment_add_feed_stock" />
+
+    <fragment
+        android:id="@+id/recordFeedConsumptionFragment"
+        android:name="com.example.cunipro.ui.feed.RecordFeedConsumptionFragment"
+        android:label="Sortie de stock"
+        tools:layout="@layout/fragment_record_feed_consumption" />
+
+    <fragment
+        android:id="@+id/tasksFragment"
+        android:name="com.example.cunipro.ui.tasks.TasksFragment"
+        android:label="Tâches &amp; Notifications"
+        tools:layout="@layout/fragment_tasks">
+        <action
+            android:id="@+id/action_tasksFragment_to_alertSettingsFragment"
+            app:destination="@id/alertSettingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.cunipro.ui.settings.SettingsFragment"
+        android:label="Paramètres"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_alertSettingsFragment"
+            app:destination="@id/alertSettingsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.cunipro.ui.settings.EditProfileFragment"
+        android:label="Modifier le profil"
+        tools:layout="@layout/fragment_edit_profile" />
+
+    <fragment
+        android:id="@+id/alertSettingsFragment"
+        android:name="com.example.cunipro.ui.settings.AlertSettingsFragment"
+        android:label="Réglages des alertes"
+        tools:layout="@layout/fragment_alert_settings" />
+
+    <fragment
+        android:id="@+id/healthFinanceFragment"
+        android:name="com.example.cunipro.ui.healthfinance.HealthFinanceFragment"
+        android:label="Soins &amp; Santé"
+        tools:layout="@layout/fragment_health_finance">
+        <action
+            android:id="@+id/action_healthFinanceFragment_to_addCareFragment"
+            app:destination="@id/addCareFragment" />
+        <action
+            android:id="@+id/action_healthFinanceFragment_to_addMortalityFragment"
+            app:destination="@id/addMortalityFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addCareFragment"
+        android:name="com.example.cunipro.ui.healthfinance.AddCareFragment"
+        android:label="Enregistrer un soin"
+        tools:layout="@layout/fragment_add_care" />
+
+    <fragment
+        android:id="@+id/addMortalityFragment"
+        android:name="com.example.cunipro.ui.healthfinance.AddMortalityFragment"
+        android:label="Déclarer un décès"
+        tools:layout="@layout/fragment_add_mortality" />
+
+    <fragment
+        android:id="@+id/salesFinanceFragment"
+        android:name="com.example.cunipro.ui.salesfinance.SalesFinanceFragment"
+        android:label="Vente &amp; Finance"
+        tools:layout="@layout/fragment_sales_finance">
+        <action
+            android:id="@+id/action_salesFinanceFragment_to_addSaleFragment"
+            app:destination="@id/addSaleFragment" />
+        <action
+            android:id="@+id/action_salesFinanceFragment_to_addExpenseFragment"
+            app:destination="@id/addExpenseFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addSaleFragment"
+        android:name="com.example.cunipro.ui.salesfinance.AddSaleFragment"
+        android:label="Nouvelle vente"
+        tools:layout="@layout/fragment_add_sale" />
+
+    <fragment
+        android:id="@+id/addExpenseFragment"
+        android:name="com.example.cunipro.ui.salesfinance.AddExpenseFragment"
+        android:label="Nouvelle dépense"
+        tools:layout="@layout/fragment_add_expense" />
+</navigation>

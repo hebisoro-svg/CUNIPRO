@@ -1,0 +1,447 @@
+<resources>
+    <string name="app_name">CUNI PRO</string>
+    <string name="name">Welcome</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_rabbits">Rabbits</string>
+    <string name="nav_repro">Repro</string>
+    <string name="nav_feed">Feed</string>
+    <string name="nav_health">Care &amp; Health</string>
+
+    <!-- General Actions & Headers -->
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_animals">Rabbit Herd Management</string>
+    <string name="title_reproduction">Reproduction &amp; Kindling</string>
+    <string name="title_feed">Feed Management</string>
+    <string name="title_health_finance">Health &amp; Finance</string>
+    <string name="title_sales_finance">Sales &amp; Finance</string>
+    <string name="title_tasks">Tasks &amp; Notifications</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_alert_settings">Alerts &amp; Notifications</string>
+    <string name="title_edit_profile">Edit Profile</string>
+
+    <!-- Buttons -->
+    <string name="btn_add">Add</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_delete">Delete</string>
+    <string name="btn_edit">Edit</string>
+    <string name="btn_close">Close</string>
+    <string name="btn_confirm">Confirm</string>
+    <string name="btn_login">Log in</string>
+    <string name="btn_register">Create Account</string>
+    <string name="btn_search">Search</string>
+    <string name="btn_filter">Filter</string>
+    <string name="btn_see_all">See all</string>
+
+    <!-- Dashboard Screen -->
+    <string name="dash_total_animals">Total herd</string>
+    <string name="dash_males">Males</string>
+    <string name="dash_females">Females</string>
+    <string name="dash_breeders">Breeding stock</string>
+    <string name="dash_weaned">Weaned</string>
+    <string name="dash_fattening">Fattening</string>
+    <string name="dash_mortality">Mortality</string>
+    <string name="dash_income">Income</string>
+    <string name="dash_expenses">Expenses</string>
+    <string name="dash_balance">Net balance</string>
+    <string name="dash_feed_stock">Feed stock</string>
+    <string name="dash_active_gestations">Active gestations</string>
+    <string name="dash_pending_tasks">Pending tasks</string>
+    <string name="dash_quick_actions">Quick actions</string>
+    <string name="dash_recent_activity">Recent activity</string>
+    <string name="dash_add_animal">Add rabbit</string>
+    <string name="dash_add_mating">New mating</string>
+    <string name="dash_add_feed">Add stock</string>
+    <string name="dash_add_health">Care &amp; Treatment</string>
+    <string name="dash_add_sale">New sale</string>
+    <string name="dash_add_task">New task</string>
+
+    <string name="dash_herd_overview">Herd Overview &amp; Mortality</string>
+    <string name="dash_total_living">Total Living</string>
+    <string name="dash_mortality_herd">Herd Mortality</string>
+    <string name="dash_income_finance">Income &amp; Finance</string>
+    <string name="dash_total_income">Total Income</string>
+    <string name="dash_total_expenses">Total Expenses</string>
+    <string name="dash_feed_and_stock">Feed &amp; Stock</string>
+    <string name="dash_total_feed_available">Total stock available</string>
+    <string name="dash_low_stock_threshold">Low stock threshold reached</string>
+    <string name="dash_repro_stats">Reproduction Statistics</string>
+    <string name="dash_active_gestations_lbl">Active gestations</string>
+    <string name="dash_kits_born_alive">Kits born alive</string>
+    <string name="dash_kits_born_dead">Stillborn kits</string>
+    <string name="dash_kits_weaned">Weaned kits</string>
+    <string name="dash_shortcuts">Quick Shortcuts</string>
+    <string name="dash_today_tasks">Today\'s Tasks &amp; Priorities</string>
+    <string name="dash_no_pending_tasks">No pending priority tasks.</string>
+
+    <!-- Animals Screen -->
+    <string name="animal_tag">Tag ID</string>
+    <string name="animal_sex">Sex</string>
+    <string name="animal_weight">Weight (kg)</string>
+    <string name="animal_breed">Breed</string>
+    <string name="animal_category">Category</string>
+    <string name="animal_status">Status</string>
+    <string name="animal_birth_date">Date of birth</string>
+    <string name="animal_cage">Cage No.</string>
+    <string name="animal_notes">Notes / Remarks</string>
+    <string name="animal_male">Male</string>
+    <string name="animal_female">Female</string>
+    <string name="animal_search_hint">Search by tag ID, breed...</string>
+    <string name="animal_all_categories">All categories</string>
+    <string name="animal_empty">No rabbits recorded</string>
+    <string name="animal_add_title">Add rabbit</string>
+    <string name="animal_edit_title">Edit rabbit</string>
+    <string name="animal_detail_title">Rabbit details</string>
+
+    <!-- Reproduction Screen -->
+    <string name="repro_new_mating">New mating</string>
+    <string name="repro_female">Female rabbit</string>
+    <string name="repro_male">Male rabbit</string>
+    <string name="repro_mating_date">Mating date</string>
+    <string name="repro_palpation_date">Palpation date</string>
+    <string name="repro_expected_kindling">Expected kindling</string>
+    <string name="repro_expected_weaning">Expected weaning</string>
+    <string name="repro_palpation_result">Palpation result</string>
+    <string name="repro_positive">Positive (Pregnant)</string>
+    <string name="repro_negative">Negative (Not pregnant)</string>
+    <string name="repro_record_kindling">Record kindling</string>
+    <string name="repro_born_alive">Born alive</string>
+    <string name="repro_stillborn">Stillborn</string>
+    <string name="repro_weaned_count">Weaned kits</string>
+    <string name="repro_record_weaning">Record weaning</string>
+    <string name="repro_status_gestating">Pregnant</string>
+    <string name="repro_status_kindled">Kindled</string>
+    <string name="repro_status_weaned">Weaned</string>
+
+    <!-- Feed Screen -->
+    <string name="feed_stock_title">Feed stock</string>
+    <string name="feed_add_stock">Add stock</string>
+    <string name="feed_name">Feed name</string>
+    <string name="feed_quantity">Quantity (kg)</string>
+    <string name="feed_threshold">Low threshold (kg)</string>
+    <string name="feed_record_consumption">Record consumption</string>
+    <string name="feed_low_stock_warning">Warning: Low feed stock!</string>
+
+    <!-- Health & Finance Screen -->
+    <string name="hf_health">Care &amp; Health</string>
+    <string name="hf_sales">Sales</string>
+    <string name="hf_expenses">Expenses</string>
+    <string name="hf_mortality">Mortality</string>
+    <string name="hf_add_health_log">Add care</string>
+    <string name="hf_add_sale">Record sale</string>
+    <string name="hf_add_expense">Record expense</string>
+    <string name="hf_add_mortality">Record death</string>
+    <string name="hf_treatment_type">Treatment type</string>
+    <string name="hf_product_used">Product / Medicine</string>
+    <string name="hf_dosage">Dosage / Dose</string>
+    <string name="hf_price">Price / Amount (FCFA)</string>
+    <string name="hf_buyer">Buyer</string>
+
+    <!-- Tasks & Notifications -->
+    <string name="tasks_pending">Pending tasks</string>
+    <string name="tasks_completed">Completed tasks</string>
+    <string name="tasks_add_task">New task</string>
+    <string name="tasks_title_hint">Task title</string>
+    <string name="tasks_due_date">Due date</string>
+    <string name="tasks_priority">Priority</string>
+    <string name="tasks_priority_high">High</string>
+    <string name="tasks_priority_medium">Medium</string>
+    <string name="tasks_priority_low">Low</string>
+    <string name="tasks_notifications">Notifications</string>
+    <string name="tasks_mark_all_read">Mark all as read</string>
+
+    <!-- Settings Screen -->
+    <string name="setting_profile">Farmer Profile</string>
+    <string name="setting_notifications">Notifications &amp; Alerts</string>
+    <string name="setting_breeding">Breeding Durations</string>
+    <string name="setting_language">App Language</string>
+    <string name="setting_security">Security &amp; Password</string>
+    <string name="setting_sync">Cloud Synchronization</string>
+    <string name="setting_logout">Log out</string>
+    <string name="setting_sync_now">Sync Now</string>
+    <string name="lang_french">French</string>
+    <string name="lang_english">English</string>
+
+    <!-- Auth -->
+    <string name="auth_login_title">Log in to CUNI PRO</string>
+    <string name="auth_register_title">Create CUNI PRO Account</string>
+    <string name="auth_email">Email address</string>
+    <string name="auth_password">Password</string>
+    <string name="auth_full_name">Full name</string>
+    <string name="auth_farm_name">Farm / Breed name</string>
+    <string name="auth_phone">Phone number</string>
+    <string name="auth_no_account">Don\'t have an account? Sign up</string>
+    <string name="auth_have_account">Already have an account? Log in</string>
+
+    <!-- Form Titles, Hints, Labels & Badges -->
+    <string name="form_tag_proposed">Suggested</string>
+    <string name="form_tag_hint">e.g. L-025</string>
+    <string name="form_select_or_type">Select or enter...</string>
+    <string name="form_date_format_hint">dd/mm/yyyy</string>
+    <string name="form_weight_hint">e.g. 3.8</string>
+    <string name="form_origin_hint">e.g. Born on farm</string>
+    <string name="form_notes_hint">Behavior, health, remarks...</string>
+    <string name="form_save_btn">✓ Save</string>
+    <string name="form_save_simple">Save</string>
+
+    <!-- Animal Categories -->
+    <string name="cat_breeder">Breeder</string>
+    <string name="cat_primiparous">Primiparous</string>
+    <string name="cat_multiparous">Multiparous</string>
+    <string name="cat_fattening">Fattening</string>
+    <string name="cat_weaned">Weaned</string>
+    <string name="cat_sold">Sold</string>
+    <string name="cat_deceased">Deceased</string>
+    <string name="cat_all">All</string>
+
+    <!-- Breeds & Origins -->
+    <string name="breed_nz_white">New Zealand White</string>
+    <string name="breed_fauve_bourgogne">Fauve de Bourgogne</string>
+    <string name="breed_giant_flanders">Flemish Giant</string>
+    <string name="breed_chinchilla">Chinchilla</string>
+    <string name="breed_french_papillon">French Lop / Checkered Giant</string>
+    <string name="breed_californian">Californian</string>
+    <string name="breed_local">Local</string>
+
+    <string name="origin_born_on_farm">Farm (Born on site)</string>
+    <string name="origin_purchase">Purchase</string>
+    <string name="origin_donation">Donation</string>
+    <string name="origin_exchange">Exchange</string>
+
+    <!-- Feed Stocks & Consumption -->
+    <string name="feed_type_label">Feed type</string>
+    <string name="feed_type_granules">Pellets</string>
+    <string name="feed_type_foin">Hay</string>
+    <string name="feed_type_legumes">Vegetables</string>
+    <string name="feed_type_graines">Seeds</string>
+    <string name="feed_type_autres">Others</string>
+    <string name="feed_qty_added">Quantity added</string>
+    <string name="feed_step_1kg">In 1 kg steps</string>
+    <string name="feed_add_date">Date added</string>
+    <string name="feed_alert_title">Low stock alert</string>
+    <string name="feed_alert_sub">Warn below this threshold</string>
+    <string name="feed_stock_after_add">Stock after addition</string>
+    <string name="feed_btn_save_add">✓ Save addition</string>
+
+    <string name="feed_out_title">Stock removal</string>
+    <string name="feed_qty_out_label">Quantity distributed / removed</string>
+    <string name="feed_deducted_main">Deducted from main stock</string>
+    <string name="feed_out_date">Date of removal</string>
+    <string name="feed_stock_after_out">Stock after removal</string>
+    <string name="feed_btn_save_out">✓ Save removal</string>
+    <string name="feed_tab_stock">Stock</string>
+    <string name="feed_tab_consumption">Consumption</string>
+    <string name="feed_avg_per_day">average per day</string>
+    <string name="feed_daily_detail">Daily consumption (Detail)</string>
+    <string name="feed_by_type">By feed type</string>
+    <string name="feed_today">Today</string>
+    <string name="feed_status_sufficient">Sufficient</string>
+    <string name="feed_status_low">Low stock</string>
+    <string name="feed_threshold_info">Alert threshold: %.0f kg</string>
+
+    <!-- Health & Care -->
+    <string name="care_title">Record care</string>
+    <string name="care_target_label">Rabbit or group concerned</string>
+    <string name="care_entire_farm">Entire herd</string>
+    <string name="care_disease_label">Disease or reason for care</string>
+    <string name="care_symptoms">Symptoms</string>
+    <string name="care_treatment">Treatment</string>
+    <string name="care_dosage">Dosage</string>
+    <string name="care_date">Care date</string>
+    <string name="care_reminder_title">Next care reminder</string>
+    <string name="care_reminder_sub">Notification on scheduled day</string>
+    <string name="care_next_due">On</string>
+    <string name="care_btn_save">✓ Save care</string>
+
+    <string name="mortality_title">Declare a death</string>
+    <string name="mortality_target_label">Rabbit concerned</string>
+    <string name="mortality_select_rabbit_hint">Select rabbit...</string>
+    <string name="mortality_cause_label">Presumed cause</string>
+    <string name="mortality_date_label">Date of death</string>
+    <string name="mortality_symptoms_hint">Observed symptoms, circumstances...</string>
+    <string name="mortality_count_label">Number of deaths</string>
+    <string name="mortality_btn_save">✅ Declare death</string>
+    <string name="mortality_status_ongoing">Ongoing</string>
+    <string name="mortality_status_done">Completed</string>
+    <string name="mortality_no_living">No living rabbits</string>
+
+    <!-- Diseases & Causes -->
+    <string name="disease_coccidiosis">Coccidiosis</string>
+    <string name="disease_ear_mange">Ear mange</string>
+    <string name="disease_myxomatosis">Myxomatosis vaccine</string>
+    <string name="disease_diarrhea">Diarrhea</string>
+    <string name="disease_coryza">Coryza</string>
+    <string name="disease_other">Other</string>
+
+    <string name="cause_disease">Disease</string>
+    <string name="cause_stillborn">Stillborn</string>
+    <string name="cause_heat">Heat</string>
+    <string name="cause_accident">Accident</string>
+    <string name="cause_unknown">Unknown</string>
+
+    <!-- Sales & Expenses -->
+    <string name="expense_title">New expense</string>
+    <string name="expense_cat_feed">Feed</string>
+    <string name="expense_cat_health">Health</string>
+    <string name="expense_cat_other">Other charges</string>
+    <string name="expense_label">Description</string>
+    <string name="expense_amount">Amount</string>
+    <string name="expense_date">Expense date</string>
+    <string name="expense_supplier">Supplier or remark</string>
+    <string name="expense_optional">Optional</string>
+    <string name="expense_btn_save">✓ Save expense</string>
+    <string name="expense_feed_hint">e.g. Pellets (50 kg)</string>
+    <string name="expense_feed_info">Buying feed? Remember to also add it to stock in Feed.</string>
+    <string name="expense_health_hint">e.g. Vaccines / Medicines</string>
+    <string name="expense_health_info">This expense will be recorded in the Health category of your farm.</string>
+    <string name="expense_other_hint">e.g. Purchase of cages, transport...</string>
+    <string name="expense_other_info">This expense will be recorded under your Other charges.</string>
+
+    <string name="sale_title">New sale</string>
+    <string name="sale_type_label">Sale type</string>
+    <string name="sale_type_rabbits">Rabbits</string>
+    <string name="sale_type_feed">Feed</string>
+    <string name="sale_type_equipment">Equipment</string>
+    <string name="sale_select_rabbit">Select a rabbit</string>
+    <string name="sale_item_designation">Item designation</string>
+    <string name="sale_client">Customer</string>
+    <string name="sale_client_hint">Customer name (optional)</string>
+    <string name="sale_qty">Quantity</string>
+    <string name="sale_total_amount">Total amount</string>
+    <string name="sale_date">Sale date</string>
+    <string name="sale_btn_save">✓ Save sale</string>
+    <string name="sale_rabbit_info">Selected rabbit will switch to \"Sold\" status in the animal list.</string>
+    <string name="sale_feed_info">Remember to also record stock removal in Feed.</string>
+    <string name="sale_equipment_info">Equipment sale will be included in your revenue.</string>
+    <string name="sale_rabbits_qty_subtitle">Number of rabbits</string>
+    <string name="sale_feed_qty_subtitle">Feed quantity (kg/bag)</string>
+    <string name="sale_equipment_qty_subtitle">Number of equipment items</string>
+
+    <!-- Mating & Kindling -->
+    <string name="mating_title">New mating</string>
+    <string name="mating_female_hint">Select female...</string>
+    <string name="mating_male_hint">Select male...</string>
+    <string name="mating_date_label">Mating date</string>
+    <string name="mating_auto_dates">📅 Automatically calculated dates</string>
+    <string name="mating_auto_reminder">A task reminder will be added for each of these dates.</string>
+
+    <string name="kindling_title">Record kindling</string>
+    <string name="kindling_date_label">Kindling date</string>
+    <string name="kindling_live_kits">Live kits</string>
+    <string name="kindling_live_sub">Born alive in litter</string>
+    <string name="kindling_dead_kits">Stillborn</string>
+    <string name="kindling_dead_sub">Counted in mortality</string>
+    <string name="kindling_total_litter">Total litter size</string>
+    <string name="kindling_auto_weaning_info">Automatically calculated: 35 days after kindling. A task reminder will be added.</string>
+    <string name="kindling_btn_save">✓ Record kindling</string>
+
+    <!-- Edit Profile & Alert Settings -->
+    <string name="profile_avatar_label">Your badge</string>
+    <string name="profile_avatar_sub">Uses your name\'s initials.</string>
+    <string name="profile_email_info">This is your login identifier: it cannot be changed here.</string>
+    <string name="profile_btn_save">Save changes</string>
+    <string name="profile_btn_change_pass">Change password</string>
+
+    <string name="alerts_header">Alert Settings</string>
+    <string name="alerts_auto_title">Automatic Alerts</string>
+    <string name="alerts_low_stock_sub">When feed drops below its threshold</string>
+    <string name="alerts_care_sub">On the scheduled care day</string>
+    <string name="alerts_tasks_sub">At chosen date and time</string>
+    <string name="alerts_morning_time">Morning reminder time</string>
+    <string name="alerts_battery_title">To never miss a reminder</string>
+    <string name="alerts_battery_sub">Allow notifications and disable battery saver for CUNI PRO.</string>
+    <string name="alerts_battery_btn">See how to do it</string>
+
+    <!-- Settings Dialog & Main -->
+    <string name="settings_edit_profile">Edit profile</string>
+    <string name="settings_section_language">Language</string>
+    <string name="settings_section_offline">Offline operation</string>
+    <string name="settings_about_title">About CUNI PRO</string>
+    <string name="settings_about_body">Version 1.0.0 (Production)\nProfessional rabbit farm management application.</string>
+    <string name="settings_sync_offline_title">Offline operation</string>
+    <string name="settings_sync_synced">Everything is synced</string>
+    <string name="settings_last_sync_format">Last sync: %s</string>
+    <string name="settings_data_to_send">Data to send</string>
+    <string name="settings_sync_wifi_title">Sync on Wi-Fi only</string>
+    <string name="settings_sync_wifi_sub">Saves mobile data</string>
+    <string name="settings_cloud_backup_title">Automatic cloud backup</string>
+    <string name="settings_cloud_backup_sub">Your data is also backed up online</string>
+    <string name="settings_offline_info">The app works offline. Your data is kept on the phone and uploaded as soon as the network returns.</string>
+    <string name="settings_section_preferences">Preferences</string>
+    <string name="settings_alerts_title">Alerts and reminders</string>
+    <string name="settings_alerts_sub">Stock, kindling, weaning, care</string>
+    <string name="settings_breeding_durations_format">Palpation %1$d d · Kindling %2$d d · Weaning %3$d d</string>
+    <string name="settings_section_security">Security</string>
+    <string name="settings_section_help">Help</string>
+    <string name="settings_help_support">Help &amp; support</string>
+    <string name="settings_terms">Terms of use</string>
+    <string name="terms_dialog_title">Terms of Use</string>
+    <string name="terms_btn_close">Got it</string>
+    <string name="terms_content"><b>TERMS OF USE - CUNI PRO</b><br/><br/><b>1. Acceptance of Terms</b><br/>By creating an account or using CUNI PRO, you agree to be bound by these Terms of Use. If you do not agree, please do not use the application.<br/><br/><b>2. Service Description</b><br/>CUNI PRO is a rabbit farm management app. It helps you track livestock, breeding, feeding, health, finances, and scheduled tasks. The app works offline and syncs your data automatically with the cloud when connected.<br/><br/><b>3. Account &amp; Security</b><br/>You are responsible for maintaining the confidentiality of your login credentials and for all activities under your account. You agree to provide accurate information upon registration.<br/><br/><b>4. Data Ownership</b><br/>All data entered regarding your farm remains your exclusive property. CUNI PRO processes this data solely to provide app functionality and backups.<br/><br/><b>5. Disclaimer &amp; Liability</b><br/>CUNI PRO strives to ensure service availability and security. However, the app is provided "as is". The farmer remains solely responsible for management decisions made for their farm.<br/><br/><b>6. Changes to Terms</b><br/>We reserve the right to modify these terms at any time. Users will be notified of significant updates through the app.<br/><br/><b>7. Contact</b><br/>For questions regarding these Terms of Use, contact CUNI PRO support at: <b>support@cunipro.app</b>.</string>
+    <string name="settings_about">About</string>
+    <string name="settings_version">Version 1.0.0</string>
+    <string name="settings_logout_confirm_msg">Are you sure you want to log out?</string>
+    <string name="settings_sync_success">Sync successful!</string>
+    <string name="settings_lang_set_fr">Language set: French</string>
+    <string name="settings_lang_set_en">Language set: English</string>
+    <string name="settings_durations_updated">Durations updated</string>
+    <string name="settings_password_min_length">New password must be at least 6 characters</string>
+    <string name="settings_password_mismatch">Passwords do not match</string>
+    <string name="settings_password_updated">Password updated successfully</string>
+    <string name="settings_password_incorrect">Current password is incorrect</string>
+    <string name="settings_password_current_empty">Please enter your current password</string>
+    <string name="btn_yes">Yes</string>
+
+    <!-- Dialogs & General UI -->
+    <string name="dialog_change_pass_title">Change password</string>
+    <string name="dialog_current_pass">Current password</string>
+    <string name="dialog_new_pass">New password</string>
+    <string name="dialog_confirm_pass">Confirm new password</string>
+    <string name="dialog_durations_title">Breeding durations (days)</string>
+    <string name="dialog_durations_palpation">Palpation (days after mating)</string>
+    <string name="dialog_durations_kindling">Kindling / Gestation (days)</string>
+    <string name="dialog_durations_weaning">Weaning (days after kindling)</string>
+
+    <string name="tasks_received_tab">Received</string>
+    <string name="tasks_tasks_tab">Tasks</string>
+    <string name="tasks_info_banner">Each task sends you a phone reminder, even without internet.</string>
+    <string name="tasks_important_flag">Important / urgent task 🚩</string>
+    <string name="tasks_category">Category</string>
+    <string name="tasks_reminder">Reminder</string>
+    <string name="tasks_repetition">Repetition</string>
+
+    <string name="animal_detail_header">Rabbit profile</string>
+    <string name="animal_detail_btn_edit">✏️ Edit</string>
+    <string name="animal_detail_btn_delete">🗑️ Delete</string>
+    <string name="animal_delete_confirm_title">Delete rabbit</string>
+    <string name="animal_delete_confirm_msg">Are you sure you want to delete this rabbit?</string>
+
+    <string name="repro_mark_weaned">Mark as weaned</string>
+    <string name="repro_kits_born">Kits born</string>
+    <string name="repro_success_rate">Success rate</string>
+    <string name="repro_gestations_tab">Gestations</string>
+    <string name="repro_kindling_tab">Kindlings</string>
+    <string name="repro_weaning_tab">Weanings</string>
+
+    <string name="sales_total_income">Total Income</string>
+    <string name="sales_total_expenses">Total Expenses</string>
+    <string name="sales_net_balance">Net Balance:</string>
+    <string name="sales_net_balance_sub">Net balance is simple profit: income minus expenses.</string>
+    <string name="sales_sales_tab">Sales</string>
+    <string name="sales_expenses_tab">Expenses</string>
+    <string name="sales_no_sales">No sales recorded yet.</string>
+    <string name="sales_no_expenses">No expenses recorded yet.</string>
+    <string name="sales_expense_breakdown">Expense Breakdown</string>
+
+    <string name="health_next_care">Next care scheduled</string>
+    <string name="health_no_reminders">No reminders scheduled</string>
+    <string name="health_no_logs">No care or treatment recorded.</string>
+    <string name="health_mortality_month">Deaths this month</string>
+    <string name="health_mortality_rate">Mortality rate</string>
+    <string name="health_main_cause">Main cause</string>
+    <string name="health_causes_3m">Causes over 3 months</string>
+    <string name="health_last_deaths">Recent deaths</string>
+    <string name="health_no_deaths">No death declarations recorded.</string>
+</resources>

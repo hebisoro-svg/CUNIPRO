@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- CUNI PRO Theme Colors -->
+    <color name="cuni_green_primary">#2E7D32</color>
+    <color name="cuni_green_primary_dark">#1B5E20</color>
+    <color name="cuni_green_secondary">#4CAF50</color>
+    <color name="cuni_green_light">#E8F5E9</color>
+    <color name="cuni_green_container">#C8E6C9</color>
+
+    <!-- Header Gradient Colors -->
+    <color name="cuni_header_gradient_start">#124416</color>
+    <color name="cuni_header_gradient_center">#1B5E20</color>
+    <color name="cuni_header_gradient_end">#2E7D32</color>
+
+    <color name="cuni_background">#F2F8F4</color>
+    <color name="cuni_surface">#FFFFFF</color>
+    <color name="cuni_text_primary">#1C1B1F</color>
+    <color name="cuni_text_secondary">#49454F</color>
+
+    <!-- Status Colors -->
+    <color name="cuni_status_success">#2E7D32</color>
+    <color name="cuni_status_warning">#F57C00</color>
+    <color name="cuni_status_danger">#D32F2F</color>
+    <color name="cuni_status_info">#0288D1</color>
+
+    <!-- Animal Status Colors -->
+    <color name="cuni_status_reproducteur">#2E7D32</color>
+    <color name="cuni_status_engraissement">#E65100</color>
+    <color name="cuni_status_sevre">#0277BD</color>
+    <color name="cuni_status_vendu">#757575</color>
+    <color name="cuni_status_decede">#C62828</color>
+</resources>

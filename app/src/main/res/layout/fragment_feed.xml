@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cuni_background">
+
+    <!-- Header Section -->
+    <LinearLayout
+        android:id="@+id/headerFeed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_feed"
+                android:textColor="@color/cuni_green_primary_dark"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvFeedHeaderSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                tools:text="0 aliment en stock · 0 alerte de stock faible" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/includeTopActions"
+            layout="@layout/include_top_actions" />
+    </LinearLayout>
+
+    <!-- Toggle Tab Switcher (Stock vs Consommation) -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardFeedTabSwitcher"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="4dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerFeed"
+        app:strokeColor="#E0E0E0"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTabStock"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/feed_tab_stock"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/cuni_green_primary_dark"
+                app:cornerRadius="12dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTabConsumption"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/feed_tab_consumption"
+                android:textColor="@color/cuni_text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Scrollable Content Container -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardFeedTabSwitcher">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="80dp">
+
+            <!-- TAB 1: STOCK SECTION -->
+            <LinearLayout
+                android:id="@+id/layoutStockSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <!-- Low Stock Warning Alert Banner -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardLowStockWarning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="#FFF3E0"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#FFE0B2"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⚠️"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvWarningTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#E65100"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                tools:text="Stock faible : granulés" />
+
+                            <TextView
+                                android:id="@+id/tvWarningSubtitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:textColor="#795548"
+                                android:textSize="13sp"
+                                tools:text="Il reste 18 kg, sous le seuil de 25 kg. À ce rythme, environ 3 jours." />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Action Buttons Row (+ Ajout de stock / - Sortie de stock) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAddStock"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        android:minHeight="48dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:paddingHorizontal="4dp"
+                        android:paddingVertical="6dp"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="@string/feed_add_stock"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="@color/cuni_green_primary"
+                        app:cornerRadius="12dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnRemoveStock"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1"
+                        android:minHeight="48dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:paddingHorizontal="4dp"
+                        android:paddingVertical="6dp"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="@string/feed_record_consumption"
+                        android:textColor="@color/cuni_green_primary_dark"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="12dp"
+                        app:strokeColor="@color/cuni_green_primary_dark"
+                        app:strokeWidth="1.5dp" />
+                </LinearLayout>
+
+                <!-- Stock Items List -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvFeedStock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    tools:listitem="@layout/item_feed_stock" />
+            </LinearLayout>
+
+            <!-- TAB 2: CONSUMPTION SECTION -->
+            <LinearLayout
+                android:id="@+id/layoutConsumptionSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <!-- Summary 7 Days Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="1dp"
+                    app:strokeColor="#E0E0E0"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="7 derniers jours"
+                                android:textColor="#757575"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/tv7DaysTotalKg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/cuni_green_primary_dark"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                tools:text="0 kg consommés" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvDailyAverageKg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/cuni_green_primary_dark"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                tools:text="0 kg" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/feed_avg_per_day"
+                                android:textColor="#757575"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Daily Consumption Text List Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="1dp"
+                    app:strokeColor="#E0E0E0"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/feed_daily_detail"
+                            android:textColor="@color/cuni_text_primary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="vertical">
+
+                            <!-- Day 1 -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:id="@+id/tvDay1Label"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="J-6"
+                                        android:textColor="#757575"
+                                        android:textSize="14sp" />
+                                    <TextView
+                                        android:id="@+id/tvDay1Value"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0 kg"
+                                        android:textColor="@color/cuni_text_primary"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                                <ProgressBar
+                                    android:id="@+id/pbDay1"
+                                    style="@android:style/Widget.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="6dp"
+                                    android:layout_marginTop="4dp"
+                                    android:max="100"
+                                    android:progress="0"
+                                    android:progressDrawable="@drawable/bg_progress_bar_green" />
+                            </LinearLayout>
+
+                            <!-- Day 2 -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:id="@+id/tvDay2Label"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="J-5"
+                                        android:textColor="#757575"
+                                        android:textSize="14sp" />
+                                    <TextView
+                                        android:id="@+id/tvDay2Value"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0 kg"
+                                        android:textColor="@color/cuni_text_primary"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                                <ProgressBar
+                                    android:id="@+id/pbDay2"
+                                    style="@android:style/Widget.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="6dp"
+                                    android:layout_marginTop="4dp"
+                                    android:max="100"
+                                    android:progress="0"
+                                    android:progressDrawable="@drawable/bg_progress_bar_green" />
+                            </LinearLayout>
+
+                            <!-- Day 3 -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:id="@+id/tvDay3Label"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="J-4"
+                                        android:textColor="#757575"
+                                        android:textSize="14sp" />
+                                    <TextView
+                                        android:id="@+id/tvDay3Value"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0 kg"
+                                        android:textColor="@color/cuni_text_primary"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                                <ProgressBar
+                                    android:id="@+id/pbDay3"
+                                    style="@android:style/Widget.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="6dp"
+                                    android:layout_marginTop="4dp"
+                                    android:max="100"
+                                    android:progress="0"
+                                    android:progressDrawable="@drawable/bg_progress_bar_green" />
+                            </LinearLayout>
+
+                            <!-- Day 4 -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:id="@+id/tvDay4Label"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="J-3"
+                                        android:textColor="#757575"
+                                        android:textSize="14sp" />
+                                    <TextView
+                                        android:id="@+id/tvDay4Value"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0 kg"
+                                        android:textColor="@color/cuni_text_primary"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                                <ProgressBar
+                                    android:id="@+id/pbDay4"
+                                    style="@android:style/Widget.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="6dp"
+                                    android:layout_marginTop="4dp"
+                                    android:max="100"
+                                    android:progress="0"
+                                    android:progressDrawable="@drawable/bg_progress_bar_green" />
+                            </LinearLayout>
+
+                            <!-- Day 5 -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:id="@+id/tvDay5Label"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="J-2"
+                                        android:textColor="#757575"
+                                        android:textSize="14sp" />
+                                    <TextView
+                                        android:id="@+id/tvDay5Value"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0 kg"
+                                        android:textColor="@color/cuni_text_primary"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                                <ProgressBar
+                                    android:id="@+id/pbDay5"
+                                    style="@android:style/Widget.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="6dp"
+                                    android:layout_marginTop="4dp"
+                                    android:max="100"
+                                    android:progress="0"
+                                    android:progressDrawable="@drawable/bg_progress_bar_green" />
+                            </LinearLayout>
+
+                            <!-- Day 6 -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:id="@+id/tvDay6Label"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="J-1"
+                                        android:textColor="#757575"
+                                        android:textSize="14sp" />
+                                    <TextView
+                                        android:id="@+id/tvDay6Value"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0 kg"
+                                        android:textColor="@color/cuni_text_primary"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                                <ProgressBar
+                                    android:id="@+id/pbDay6"
+                                    style="@android:style/Widget.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="6dp"
+                                    android:layout_marginTop="4dp"
+                                    android:max="100"
+                                    android:progress="0"
+                                    android:progressDrawable="@drawable/bg_progress_bar_green" />
+                            </LinearLayout>
+
+                            <!-- Day 7 (Aujourd'hui) -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:id="@+id/tvDay7Label"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/feed_today"
+                                        android:textColor="@color/cuni_green_primary_dark"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+                                    <TextView
+                                        android:id="@+id/tvDay7Value"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0 kg"
+                                        android:textColor="@color/cuni_green_primary_dark"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                                <ProgressBar
+                                    android:id="@+id/pbDay7"
+                                    style="@android:style/Widget.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="8dp"
+                                    android:layout_marginTop="4dp"
+                                    android:max="100"
+                                    android:progress="0"
+                                    android:progressDrawable="@drawable/bg_progress_bar_green" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Breakdown By Feed Type Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="1dp"
+                    app:strokeColor="#E0E0E0"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/feed_by_type"
+                            android:textColor="@color/cuni_text_primary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <!-- Row 1: Granulés -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="14dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/feed_type_granules"
+                                    android:textColor="@color/cuni_text_primary"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tvConsumptionGranulesKg"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0 kg"
+                                    android:textColor="@color/cuni_green_primary"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <ProgressBar
+                                android:id="@+id/pbGranules"
+                                style="@android:style/Widget.ProgressBar.Horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="8dp"
+                                android:layout_marginTop="6dp"
+                                android:max="100"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/bg_progress_bar_green" />
+                        </LinearLayout>
+
+                        <!-- Row 2: Foin -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="14dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/feed_type_foin"
+                                    android:textColor="@color/cuni_text_primary"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tvConsumptionFoinKg"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0 kg"
+                                    android:textColor="#D97706"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <ProgressBar
+                                android:id="@+id/pbFoin"
+                                style="@android:style/Widget.ProgressBar.Horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="8dp"
+                                android:layout_marginTop="6dp"
+                                android:max="100"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/bg_progress_bar_orange" />
+                        </LinearLayout>
+
+                        <!-- Row 3: Légumes -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="14dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/feed_type_legumes"
+                                    android:textColor="@color/cuni_text_primary"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tvConsumptionLegumesKg"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0 kg"
+                                    android:textColor="#4B5563"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <ProgressBar
+                                android:id="@+id/pbLegumes"
+                                style="@android:style/Widget.ProgressBar.Horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="8dp"
+                                android:layout_marginTop="6dp"
+                                android:max="100"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/bg_progress_bar_slate" />
+                        </LinearLayout>
+
+                        <!-- Row 4: Graines -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="14dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/feed_type_graines"
+                                    android:textColor="@color/cuni_text_primary"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tvConsumptionGrainesKg"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0 kg"
+                                    android:textColor="#2563EB"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <ProgressBar
+                                android:id="@+id/pbGraines"
+                                style="@android:style/Widget.ProgressBar.Horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="8dp"
+                                android:layout_marginTop="6dp"
+                                android:max="100"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/bg_progress_bar_blue" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
